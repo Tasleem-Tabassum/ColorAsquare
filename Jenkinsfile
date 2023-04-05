@@ -15,5 +15,5 @@ pipeline {
                         IF %ERRORLEVEL% EQU 1 (exit /B 0) ELSE (exit /B 1)'''
             }
         }
-    }
+     }
 }
