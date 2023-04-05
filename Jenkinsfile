@@ -14,11 +14,11 @@ pipeline {
                 bat '.\\jenkins\\scripts\\test.sh'
             }
         }
-//         stage('Deploy') {
-//             steps {
-//                 bat 'npm run build'
-//                 bat 'npm start'
-//             }
-//         }
+        stage('Deploy') {
+            steps {
+                bat 'npm run build'
+                bat 'npm start'
+            }
+        }
     }
 }
