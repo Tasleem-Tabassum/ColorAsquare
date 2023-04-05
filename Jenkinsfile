@@ -11,14 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                script {
-                    try{
-                        bat 'npm test'
-                    }
-                    catch(err){
-                        echo err
-                    }
-                }
+                bat './jenkins/scripts/test.sh'
             }
         }
     }
