@@ -11,8 +11,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                bat script: '''npm test
-                        IF %ERRORLEVEL% EQU 1 (exit /B 0) ELSE (exit /B 1)'''
+                sh './jenkins/scripts/test.sh'
             }
         }
      }
