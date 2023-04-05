@@ -16,8 +16,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                bat 'npm run build'
-                bat 'npm start'
+                bat '.\\jenkins\\scripts\\deploy.sh'
             }
         }
     }
