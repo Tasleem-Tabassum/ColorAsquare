@@ -11,11 +11,13 @@ pipeline {
         }
         stage('Test') {
             steps {
-                try{
-                    bat 'npm test'
-                }
-                catch(err){
-                    echo err
+                script {
+                    try{
+                        bat 'npm test'
+                    }
+                    catch(err){
+                        echo err
+                    }
                 }
             }
         }
