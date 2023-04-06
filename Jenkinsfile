@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh '''aws --version'''
+                bat 'aws --version'
             }
         }
     }
