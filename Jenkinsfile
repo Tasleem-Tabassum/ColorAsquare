@@ -11,7 +11,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                bat 'aws --version'
+                bat 'npm install'
             }
         }
     }
