@@ -23,10 +23,6 @@ pipeline {
         stage('Deploy') {
             steps {
                 bat 'aws s3 sync ./build s3://demoforjenkins'
-            }
-        }
-        stage('Email NOtify'){
-            steps{
                 mail bcc: '', body: 'Sample email on success or failure', cc: '', from: 'taslu5678@gmail.com', replyTo: '', subject: 'Jenkins Node CI pipeline notification', to: 'tasleemtmohammad1@gmail.com'
             }
         }
