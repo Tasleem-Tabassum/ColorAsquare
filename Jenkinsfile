@@ -32,10 +32,10 @@ pipeline {
             echo 'Post stage'
         }
         success{
-            mail bcc: '', body: "<b>Project Status</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "Project Successfully builded", to: "tasleemtmohammad1@gmail.com";
+            mail bcc: '', body: "<b>Project Status</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: 'taslu5678@gmail.com', mimeType: 'text/html', replyTo: '', subject: "Project Successfully builded", to: "tasleemtmohammad1@gmail.com";
         }
         failure{
-            mail bcc: '', body: "<b>Project Status</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: '', mimeType: 'text/html', replyTo: '', subject: "ERROR: Project pipeline failed", to: "tasleemtmohammad1@gmail.com";
+            mail bcc: '', body: "<b>Project Status</b><br>Project: ${env.JOB_NAME} <br>Build Number: ${env.BUILD_NUMBER} <br> URL de build: ${env.BUILD_URL}", cc: '', charset: 'UTF-8', from: 'taslu5678@gmail.com', mimeType: 'text/html', replyTo: '', subject: "ERROR: Project pipeline failed", to: "tasleemtmohammad1@gmail.com";
         }
     }
 }
