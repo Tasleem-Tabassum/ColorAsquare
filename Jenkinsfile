@@ -25,41 +25,10 @@ pipeline {
                 bat 'aws s3 sync ./build s3://demoforjenkins'
             }
         }
+        stage('Email NOtify'){
+            steps{
+                mail bcc: '', body: 'Sample email on success or failure', cc: '', from: '', replyTo: '', subject: 'Jenkins Node CI pipeline notification', to: 'tasleemtmohammad1@gmail.com'
+            }
+        }
     }
 }
-
-
-
-
-
-
-
-
-// pipeline {
-//     agent any
-//     tools {
-//         nodejs "node"
-//         }
-//     environment {
-//             CI = 'true'
-//         }
-//     stages {
-//         stage('Build') {
-//             steps {
-//                 bat 'npm install'
-//             }
-//         }
-//         stage('Test') {
-//             steps {
-//                 bat '.\\jenkins\\scripts\\test.sh'
-//             }
-//         }
-//         stage('Deploy') {
-//             steps {
-//                 bat '.\\jenkins\\scripts\\deploy.sh'
-//                 input message: 'Finished using the web site? (Click "Proceed" to continue)'
-//                 bat '.\\jenkins\\scripts\\kill.sh'
-//             }
-//         }
-//     }
-// }
